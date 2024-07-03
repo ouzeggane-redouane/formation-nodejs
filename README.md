@@ -1,13 +1,3 @@
 # formation-nodejs
-Formation Incubateur We-Can-Space
- - Kenza
- - Lydia
- - Souad
- - Mira
- - Brahim
- - Yacine
- - Yani
- - Laarbi
-
-
+We-Can-Space Formation
 By : Redouane OUZEGGANE
