@@ -1,4 +1,4 @@
-const {add, sub, mul, div} = require('./utils/maths3.js')
+const {add, sub, mul, div} = require('./maths.js')
 
 let x = add(55, 38);
 console.log(x);
