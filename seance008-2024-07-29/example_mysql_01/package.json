@@ -1,0 +1,23 @@
+{
+  "name": "example_mysql_01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start1": "nodemon example01.js",
+    "start2": "nodemon example02.js",
+    "start3": "nodemon example03.js",
+    "start4": "nodemon example04.js",
+    "start5": "nodemon example05.js",
+    "start6": "nodemon example06.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
