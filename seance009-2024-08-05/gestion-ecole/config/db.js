@@ -10,14 +10,13 @@ const mysqlParams = {
     database : process.env.DB_NAME
 };
 
-const connection = mysql.createConnection( mysqlParams );
-
 const db = {}
 
 //for update & delete
 db.query = async (sql, values=[]) => {
     let ok = false;
 
+    const connection = mysql.createConnection( mysqlParams );
     await connection.connect();
     
     await new Promise( ( resolve ) => {
@@ -41,6 +40,7 @@ db.query = async (sql, values=[]) => {
 db.insertQuery = async (sql, values=[]) => {
     let lastInsertedId = -1;
 
+    const connection = mysql.createConnection( mysqlParams );
     await connection.connect();
     
     await new Promise( ( resolve ) => {
@@ -64,6 +64,7 @@ db.insertQuery = async (sql, values=[]) => {
 db.selectQuery = async (sql, values=[]) => {
     let data = null;
 
+    const connection = mysql.createConnection( mysqlParams );
     await connection.connect();
     
     await new Promise( ( resolve ) => {
