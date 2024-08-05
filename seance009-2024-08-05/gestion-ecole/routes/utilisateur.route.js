@@ -1,8 +1,7 @@
 const express = require('express')
+const controller = require('../controllers/utilisateur.controller')
 
 const router = express.Router();
-
-const controller = require('../controllers/student.controller')
 
 router.get('/', controller.getAll)
 
