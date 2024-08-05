@@ -1,0 +1,21 @@
+{
+  "name": "gestion-ecole",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "devStart": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "Formation Node-JS Groupe 01",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

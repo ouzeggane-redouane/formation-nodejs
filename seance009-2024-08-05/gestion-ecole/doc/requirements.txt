@@ -1,0 +1,26 @@
+Conceptino & Réalisation d'une application Web (MVC) avec Node - JS (Mysql / MongoDB)
+
+Besoins fonctionnels :
+=======================
+    01- Paramétrage de l'école
+    02- Gestion des utilisateurs
+    03- Gestion des formations
+    04- Gestion des salles des formations
+    05- Getion des formateurs
+    06- Gestion des groupes de formation
+    07- Gestion des évènements
+    08- Suivie des formations
+    09- Gestion des attestions
+    10- Statistiques
+
+
+Acteurs
+=======
+    1- Utilisateur (Acteur générique) : il peut s'authentifier et s'inscrire
+    2- Administrateur : (fonctionnalités de 01 à 04 et 09)
+    3- Secrétaire : 5 à 10
+
+Il y aura deux rôle dans l'application : Administrateur (Admin) et Sécraire (Sec)
+
+L'application gère les sessions et aussi enregistrer les actions sensibles (journal d'évènement)
+
