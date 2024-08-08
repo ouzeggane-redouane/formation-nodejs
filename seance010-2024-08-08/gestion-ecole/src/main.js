@@ -9,7 +9,7 @@ require('dotenv').config();
 require('./middlewares/')(app)
 
 app.set('view engine', 'ejs')
-app.set('views', 'ui-html')
+app.set('views', 'src/ui-html')
 app.use( express.static( __dirname + '/public') )
 
 

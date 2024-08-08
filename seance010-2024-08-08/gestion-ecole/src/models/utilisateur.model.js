@@ -55,8 +55,21 @@ const Utilisateur=function(id, nom, prenom, date_naissance, email, username, pas
 }//Fin de Utilisateur
 
 Utilisateur.get = async (id) =>{
-    const sql = `SELECT * FROM ${TABLE_NAME} WHERE id = ?`;
-    const row = (await db.selectQuery(sql, [id]))[0];
+    return await Utilisateur.getBy( "id", id )
+}
+
+Utilisateur.getByUsername = async (username) =>{
+    return await Utilisateur.getBy( "username", username )
+}
+
+Utilisateur.getBy = async (fieldName, value)=>{
+    const sql = `SELECT * FROM ${TABLE_NAME} WHERE ${fieldName} = ? LIMIT 1`;
+    let row = (await db.selectQuery(sql, [value]));
+
+    if (row.length == 0){
+        return null;
+    }
+    row = row[0];
 
     const user = new Utilisateur( 
         row["id"],

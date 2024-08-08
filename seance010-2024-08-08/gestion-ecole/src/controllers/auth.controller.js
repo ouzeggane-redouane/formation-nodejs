@@ -1,12 +1,16 @@
 const service = require('../services/auth.service')
 
-module.exports.login = (req, res)=>{
+module.exports.login = async (req, res)=>{
     const {username, password} = req.body;
     
-    console.log("Hello wolrd ");
-    console.log(username+" "+password);
+    const response = await service.login(username, password)
 
-    res.redirect("/login?error=true");
+    if (response == null){
+        res.redirect("/login?error=true&username="+username+"&password="+password);
+    }
+    else{
+        res.redirect("/main")
+    }
 }
 
 module.exports.logout = (req, res)=>{

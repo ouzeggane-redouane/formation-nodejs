@@ -7,7 +7,8 @@ const user  = new Utilisateur(
     "2000-06-01", 
     "rouzeggane@gmail.com",
     "admin",
-    "admin---"
+    "admin---",
+    true
 )
 
 user.save();

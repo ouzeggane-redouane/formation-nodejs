@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>  S'autentifier | Gestion d'École </title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/3rd_party/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/3rd_parts/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="/3rd_party/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="/3rd_parts/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/3rd_party/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/3rd_parts/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -25,13 +25,15 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <% if (locals.error) { %>
-        <div style="margin:5px; padding:5px; font-weight:900; background:red; color:white">Nom d'utilisateur ou mot passe erronés !!!</div>
-      <% } %>
+      <div id="error">
+        <% if (locals.error) { %>
+          <div style="margin:5px; padding:5px; font-weight:900; background:red; color:white">Nom d'utilisateur ou mot passe erronés !!!</div>
+        <% } %>
+      </div>
 
-      <form action="/auth/login" method="post">
+      <form action="/auth/login" method="post" id="form">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username">
+          <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" id="username" value="<%= locals.username %>">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -39,7 +41,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Mot de passe" name="password">
+          <input type="password" class="form-control" placeholder="Mot de passe" name="password" id="password"  value="<%= locals.password %>">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -56,8 +58,9 @@
             </div>
           </div>
           <!-- /.col -->
+          
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -78,7 +81,7 @@
         <a href="forgot-password.html">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="/register" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -87,10 +90,13 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="/3rd_party/plugins/jquery/jquery.min.js"></script>
+<script src="/3rd_parts/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/3rd_party/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/3rd_parts/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/3rd_party/dist/js/adminlte.min.js"></script>
+<script src="/3rd_parts/dist/js/adminlte.min.js"></script>
+
+<script src="/js/login.js"></script>
+
 </body>
 </html>

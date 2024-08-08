@@ -1,10 +1,10 @@
 {
   "name": "gestion-ecole",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "node main.js",
-    "devStart": "nodemon main.js"
+    "start": "node src/main.js",
+    "devStart": "nodemon src/main.js"
   },
   "keywords": [],
   "author": "Formation Node-JS Groupe 01",
